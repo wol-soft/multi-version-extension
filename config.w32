@@ -1,0 +1,7 @@
+ARG_ENABLE('wolsoft', 'wolsoft support', 'no');
+
+if (PHP_WOLSOFT != 'no') {
+	AC_DEFINE('HAVE_WOLSOFT', 1, 'wolsoft support enabled');
+
+	EXTENSION('wolsoft', 'wolsoft.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
